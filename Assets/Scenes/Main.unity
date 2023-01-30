@@ -470,7 +470,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rapidPressButton: 32
-  StartTime: 10
+  StartTime: 5
   maxPresses: 20
   inDanger: 0
 --- !u!1 &2122491100

@@ -5,7 +5,7 @@ using UnityEngine;
 public class InDanger : MonoBehaviour
 {
     [SerializeField] KeyCode rapidPressButton;
-    [SerializeField] float StartTime = 10;
+    [SerializeField] float StartTime = 5;
     [SerializeField] int maxPresses = 20;
     int pressCount = 0;
     int pressGoal = 5;
@@ -30,14 +30,20 @@ public class InDanger : MonoBehaviour
 
             if (pressCount >= pressGoal)
             {
-                Debug.Log("hi");
+                if (pressGoal > maxPresses)
+                {
+                    StartTime++;
+                    Debug.Log(StartTime);
+                }
+                inDanger = false;
+                pressCount = 0;
+                pressGoal = pressGoal + 5;
             }
         }
     }
     void inDangerStart()
     {
         this.inDanger = true;
-        pressCount = 0;
         timeLeft = StartTime;
     }
 }
