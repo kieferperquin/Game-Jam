@@ -471,7 +471,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rapidPressButton: 32
   StartTime: 5
-  maxPresses: 20
+  maxPresses: 50
   inDanger: 0
 --- !u!1 &2122491100
 GameObject:
