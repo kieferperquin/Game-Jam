@@ -8,22 +8,25 @@ public class Movement : MonoBehaviour
     float horizontalMove = 0f;
     bool jump;
     public CharacterController2D controller;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    bool stopMovement;
 
     // Update is called once per frame
     void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * speed;
-
-        if (Input.GetButtonDown("Jump"))
+        if (!stopMovement)
         {
-            jump = true;
-        }
+            horizontalMove = Input.GetAxisRaw("Horizontal") * speed;
 
+            if (Input.GetButtonDown("Jump"))
+            {
+                jump = true;
+            }
+        }
+        else
+        {
+            horizontalMove = 0;
+            jump = false;
+        }    
     }
     void FixedUpdate()
     {
@@ -31,5 +34,14 @@ public class Movement : MonoBehaviour
         controller.Move(horizontalMove * Time.fixedDeltaTime, jump);
 
         jump = false;
+    }
+
+    public void PauseMoving()
+    {
+        stopMovement = true;
+    }
+    public void ResumeMoving()
+    {
+        stopMovement = false;
     }
 }

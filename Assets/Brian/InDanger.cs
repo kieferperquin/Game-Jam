@@ -43,12 +43,12 @@ public class InDanger : MonoBehaviour
                     Debug.Log(StartTime);
                 }
                 inDanger = false;
-                pressCount = 0;
                 pressGoal += 5;
+                gameObject.GetComponent<Movement>().ResumeMoving();
             }
         }
     }
-    void inDangerStart()
+    public void InDangerStart()
     {
         this.inDanger = true;
         timeLeft = StartTime;
