@@ -10,7 +10,7 @@ public class InDanger : MonoBehaviour
     int pressCount;
     int pressGoal;
     float timeLeft;
-    bool inDanger = false;
+    [SerializeField] bool inDanger = false;
     // Start is called before the first frame update
     void Start()
     {
