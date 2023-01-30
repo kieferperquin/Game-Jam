@@ -5,8 +5,8 @@ using UnityEngine;
 public class InDanger : MonoBehaviour
 {
     [SerializeField] KeyCode rapidPressButton;
-    [SerializeField] float StartTime = 5;
-    [SerializeField] int maxPresses = 50;
+    float StartTime = 5;
+    int maxPresses = 50;
     int pressCount = 0;
     int pressGoal = 5;
     float timeLeft = 5;
@@ -52,6 +52,7 @@ public class InDanger : MonoBehaviour
     {
         this.inDanger = true;
         timeLeft = StartTime;
+        pressCount = 0;
     }
     void YouLost()
     {
