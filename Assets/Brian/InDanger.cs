@@ -8,6 +8,7 @@ public class InDanger : MonoBehaviour
     [SerializeField] float StartTime = 10;
     [SerializeField] int maxPresses = 20;
     int pressCount;
+    int pressGoal;
     float timeLeft;
     bool inDanger = false;
     // Start is called before the first frame update
@@ -21,11 +22,21 @@ public class InDanger : MonoBehaviour
     {
         if (inDanger == true)
         {
+            if (Input.GetKeyDown(rapidPressButton))
+            {
+                pressCount++;
+            }
 
+            if (pressCount >= pressGoal)
+            {
+                Debug.Log("hi");
+            }
         }
     }
     void inDangerStart()
     {
         this.inDanger = true;
+        pressCount = 0;
+        timeLeft = StartTime;
     }
 }
