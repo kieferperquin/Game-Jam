@@ -8,12 +8,6 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pauseMenuUI;
 
-
-    void Start()
-    {
-        Resume();
-    }
-
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
