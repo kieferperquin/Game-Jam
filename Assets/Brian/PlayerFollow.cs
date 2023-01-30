@@ -6,18 +6,19 @@ public class PlayerFollow : MonoBehaviour
 {
     [SerializeField] GameObject player;
     [SerializeField] bool startFollowing;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (startFollowing)
         {
             transform.position = new Vector3(player.transform.position.x, transform.position.y, transform.position.z);
         }
+    }
+    public void Follow()
+    {
+        startFollowing = true;
+    }
+    public void StopFollow()
+    {
+        startFollowing = true;
     }
 }
