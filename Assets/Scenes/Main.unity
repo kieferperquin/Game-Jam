@@ -220,6 +220,8 @@ GameObject:
   - component: {fileID: 684923607}
   - component: {fileID: 684923606}
   - component: {fileID: 684923605}
+  - component: {fileID: 684923611}
+  - component: {fileID: 684923610}
   m_Layer: 0
   m_Name: TempPlayer
   m_TagString: Untagged
@@ -351,10 +353,45 @@ Transform:
   m_LocalPosition: {x: -5.3, y: -1.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 960268100}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &684923610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684923604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cea6d44fff12a2449af538a6318d601, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 40
+  controller: {fileID: 684923611}
+--- !u!114 &684923611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684923604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75c1d3e328f10314995f41439f56cc21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 400
+  groundCheck: {fileID: 960268100}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
+  onLandEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &750778930
 GameObject:
   m_ObjectHideFlags: 0
@@ -423,6 +460,37 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
+--- !u!1 &960268099
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 960268100}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &960268100
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960268099}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 684923609}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1720490119
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,7 +599,7 @@ GameObject:
   - component: {fileID: 1813593753}
   - component: {fileID: 1813593752}
   - component: {fileID: 1813593754}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TempFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
