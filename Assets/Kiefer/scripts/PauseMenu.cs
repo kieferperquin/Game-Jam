@@ -8,11 +8,9 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pauseMenuUI;
 
-    Animator anim;
 
     void Start()
     {
-        anim = GetComponentInChildren<Animator>();
         Resume();
     }
 
@@ -32,14 +30,12 @@ public class PauseMenu : MonoBehaviour
     }
     public void Resume()
     {
-        anim.SetBool("pause", false);
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
     void Pause()
     {
-        anim.SetBool("pause", true);
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
