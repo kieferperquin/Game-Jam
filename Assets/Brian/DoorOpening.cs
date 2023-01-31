@@ -58,7 +58,8 @@ public class DoorOpening : MonoBehaviour
             }
             else
             {
-                Debug.Log("InDanger");
+                parent.GetComponent<DoorCollision>().OpenFail();
+                Destroy(gameObject);
             }
         }
 

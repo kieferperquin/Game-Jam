@@ -14,11 +14,19 @@ public class DoorCollision : MonoBehaviour
         {
             open = false;
             gameObject.GetComponent<BoxCollider2D>().enabled = true;
+
+            var tempAlp = gameObject.GetComponent<SpriteRenderer>().color;
+            tempAlp.a = 1f;
+            gameObject.GetComponent<SpriteRenderer>().color = tempAlp;
         }
         else
         {
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
             open = true;
+
+            var tempAlp = gameObject.GetComponent<SpriteRenderer>().color;
+            tempAlp.a = 0.5f;
+            gameObject.GetComponent<SpriteRenderer>().color = tempAlp;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -39,5 +47,10 @@ public class DoorCollision : MonoBehaviour
     {
         sameObj = gameObject;
         player.GetComponent<Movement>().ResumeMoving();
+    }
+    public void OpenFail()
+    {
+        player.GetComponent<InDanger>().InDangerStart();
+        sameObj = gameObject;
     }
 }
