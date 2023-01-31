@@ -5,6 +5,7 @@ using UnityEngine;
 public class InDanger : MonoBehaviour
 {
     [SerializeField] KeyCode rapidPressButton;
+    [SerializeField] GameObject menuScreen;
     float StartTime = 5;
     int maxPresses = 50;
     int pressCount = 0;
@@ -56,6 +57,6 @@ public class InDanger : MonoBehaviour
     }
     void YouLost()
     {
-        Debug.Log("lose");
+        menuScreen.GetComponent<WinLose>().Lose();
     }
 }

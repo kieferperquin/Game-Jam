@@ -271,6 +271,7 @@ MonoBehaviour:
   winChanceBlock: {fileID: 7164983115852084902}
   pointer: {fileID: 7164983116815521420}
   stopPointerButton: 104
+  isDrawer: 0
 --- !u!1 &7164983116815521420
 GameObject:
   m_ObjectHideFlags: 0
