@@ -55,7 +55,7 @@ public class InDanger : MonoBehaviour
         timeLeft = StartTime;
         pressCount = 0;
     }
-    void YouLost()
+    public void YouLost()
     {
         menuScreen.GetComponent<WinLose>().Lose();
     }

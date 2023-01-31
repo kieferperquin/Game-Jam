@@ -7,7 +7,7 @@ public class DoorCollision : MonoBehaviour
     bool open = false;
     [SerializeField] GameObject player;
     [SerializeField] GameObject doorOpenMinigame;
-    [SerializeField] GameObject menuScreen;
+    GameObject menuScreen;
     static GameObject sameObj;
     void Update()
     {
@@ -61,6 +61,6 @@ public class DoorCollision : MonoBehaviour
     }
     public void PlayerLoses()
     {
-        menuScreen.GetComponent<WinLose>().Lose();
+        player.GetComponent<InDanger>().YouLost();
     }
 }

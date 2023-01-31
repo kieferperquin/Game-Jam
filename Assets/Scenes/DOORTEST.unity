@@ -543,6 +543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 684923604}
   doorOpenMinigame: {fileID: 7164983116771893607, guid: f28692067b31ccc4bbf7970ad25e909d, type: 3}
+  menuScreen: {fileID: 0}
 --- !u!212 &472488132
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -887,6 +888,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 684923604}
   doorOpenMinigame: {fileID: 7164983116771893607, guid: 1fee3b42a56fda242adb9b60f32229c1, type: 3}
+  menuScreen: {fileID: 0}
 --- !u!212 &540628504
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1587,7 +1589,7 @@ GameObject:
   - component: {fileID: 684923611}
   - component: {fileID: 684923610}
   m_Layer: 0
-  m_Name: TempPlayer
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1653,6 +1655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rapidPressButton: 32
+  menuScreen: {fileID: 580883477}
   inDanger: 0
 --- !u!212 &684923608
 SpriteRenderer:
@@ -3940,6 +3943,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 684923604}
   doorOpenMinigame: {fileID: 7164983116771893607, guid: 1fee3b42a56fda242adb9b60f32229c1, type: 3}
+  menuScreen: {fileID: 0}
 --- !u!212 &2090366044
 SpriteRenderer:
   m_ObjectHideFlags: 0
