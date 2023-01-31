@@ -7,7 +7,20 @@ public class DoorCollision : MonoBehaviour
     bool open = false;
     [SerializeField] GameObject player;
     [SerializeField] GameObject doorOpenMinigame;
-
+    static GameObject sameObj;
+    void Update()
+    {
+        if (gameObject != sameObj)
+        {
+            open = false;
+            gameObject.GetComponent<BoxCollider2D>().enabled = true;
+        }
+        else
+        {
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            open = true;
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!open)
@@ -24,7 +37,7 @@ public class DoorCollision : MonoBehaviour
     }
     public void OpenSuccesfull()
     {
-        gameObject.GetComponent<BoxCollider2D>().enabled = false;
-        open = true;
+        sameObj = gameObject;
+        player.GetComponent<Movement>().ResumeMoving();
     }
 }
