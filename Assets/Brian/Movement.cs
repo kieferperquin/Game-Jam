@@ -9,13 +9,14 @@ public class Movement : MonoBehaviour
     bool jump;
     public CharacterController2D controller;
     bool stopMovement;
+    int reverseDir = 1;
 
     // Update is called once per frame
     void Update()
     {
         if (!stopMovement)
         {
-            horizontalMove = Input.GetAxisRaw("Horizontal") * speed;
+            horizontalMove = (Input.GetAxisRaw("Horizontal") * speed) * reverseDir;
 
             if (Input.GetButtonDown("Jump"))
             {
@@ -43,5 +44,9 @@ public class Movement : MonoBehaviour
     public void ResumeMoving()
     {
         stopMovement = false;
+    }
+    public void ReverseDirection()
+    {
+        reverseDir = -1;
     }
 }

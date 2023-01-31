@@ -53,4 +53,8 @@ public class DoorCollision : MonoBehaviour
         player.GetComponent<InDanger>().InDangerStart();
         sameObj = gameObject;
     }
+    public void DrawerOpen()
+    {
+        player.GetComponent<Movement>().ReverseDirection();
+    }
 }
