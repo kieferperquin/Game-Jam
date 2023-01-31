@@ -8,6 +8,7 @@ public class DoorOpening : MonoBehaviour
     [SerializeField] GameObject pointer;
     [SerializeField] KeyCode stopPointerButton;
     [SerializeField] bool isDrawer = false;
+    GameObject parent;
     bool stopPointer;
     float currHeight;
     float randomWinHeight;
@@ -50,7 +51,8 @@ public class DoorOpening : MonoBehaviour
                 }
                 else
                 {
-                    //open door
+                    parent.GetComponent<DoorCollision>().OpenSuccesfull();
+                    Destroy(gameObject);
                 }
                 Debug.Log("open");
             }
@@ -61,5 +63,9 @@ public class DoorOpening : MonoBehaviour
         }
 
 
+    }
+    public void SpawnParent(GameObject spawnparent)
+    {
+        parent = spawnparent;
     }
 }
