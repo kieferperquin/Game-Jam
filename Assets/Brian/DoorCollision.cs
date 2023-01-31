@@ -56,5 +56,10 @@ public class DoorCollision : MonoBehaviour
     public void DrawerOpen()
     {
         player.GetComponent<Movement>().ReverseDirection();
+        //activate cutscene
+    }
+    public void PlayerLoses()
+    {
+        Debug.Log("YOU LOSE");
     }
 }
