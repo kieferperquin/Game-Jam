@@ -53,7 +53,8 @@ public class InDanger : MonoBehaviour
                 pressGoal += 5;
                 gameObject.GetComponent<Movement>().ResumeMoving();
             }
-            clicksLeft.GetComponent<>
+            clicksLeft.GetComponent<Text>().text = (pressGoal - pressCount).ToString();
+            seconsLeft.GetComponent<Text>().text = timeLeft.ToString();
             
         }
         else

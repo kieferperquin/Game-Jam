@@ -365,7 +365,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rapidPressButton: 32
   menuScreen: {fileID: 1260609756}
-  rapidPressScreen: {fileID: 0}
+  rapidPressScreen: {fileID: 1867987791}
+  seconsLeft: {fileID: 503281767}
+  clicksLeft: {fileID: 2116312381}
   inDanger: 0
 --- !u!212 &43287987
 SpriteRenderer:
