@@ -7,7 +7,6 @@ public class DoorCollision : MonoBehaviour
     bool open = false;
     [SerializeField] GameObject player;
     [SerializeField] GameObject doorOpenMinigame;
-    GameObject menuScreen;
     static GameObject sameObj;
     void Update()
     {
