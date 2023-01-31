@@ -47,7 +47,9 @@ public class DoorOpening : MonoBehaviour
             {
                 if (isDrawer)
                 {
-                    //reverse direction
+                    parent.GetComponent<DoorCollision>().DrawerOpen();
+                    parent.GetComponent<DoorCollision>().OpenSuccesfull();
+                    Destroy(gameObject);
                 }
                 else
                 {
@@ -58,7 +60,8 @@ public class DoorOpening : MonoBehaviour
             }
             else
             {
-                Debug.Log("InDanger");
+                parent.GetComponent<DoorCollision>().OpenFail();
+                Destroy(gameObject);
             }
         }
 
