@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class CandyWrapper : MonoBehaviour
 {
-    [SerializeField] GameObject player;
+    GameObject player;
     static GameObject mostRecent;
+
+    void start()
+    {
+        GameObject.Find("Player");
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.name == player.name)
