@@ -363,7 +363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df459d4f65e08a4da04664a50e7d86a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rapidPressButton: 32
+  rapidPressButton: 306
   menuScreen: {fileID: 1260609756}
   rapidPressScreen: {fileID: 1867987791}
   seconsLeft: {fileID: 503281767}

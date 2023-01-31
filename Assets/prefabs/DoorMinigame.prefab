@@ -270,7 +270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winChanceBlock: {fileID: 7164983115852084902}
   pointer: {fileID: 7164983116815521420}
-  stopPointerButton: 104
+  stopPointerButton: 101
   isDrawer: 0
 --- !u!1 &7164983116815521420
 GameObject:
