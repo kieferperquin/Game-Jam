@@ -6,6 +6,7 @@ public class InDanger : MonoBehaviour
 {
     [SerializeField] KeyCode rapidPressButton;
     [SerializeField] GameObject menuScreen;
+    [SerializeField] GameObject rapidPressScreen;
     float StartTime = 5;
     int maxPresses = 50;
     int pressCount = 0;
@@ -23,6 +24,8 @@ public class InDanger : MonoBehaviour
     {
         if (inDanger == true)
         {
+            rapidPressScreen.SetActive(true);
+
             timeLeft = timeLeft - 1 * Time.deltaTime;
             if (timeLeft <= 0)
             {
@@ -47,6 +50,12 @@ public class InDanger : MonoBehaviour
                 pressGoal += 5;
                 gameObject.GetComponent<Movement>().ResumeMoving();
             }
+
+            rapidPressScreen.GetComponentInChildren<>
+        }
+        else
+        {
+            rapidPressScreen.SetActive(false);
         }
     }
     public void InDangerStart()
@@ -57,6 +66,7 @@ public class InDanger : MonoBehaviour
     }
     public void YouLost()
     {
+        rapidPressScreen.SetActive(false);
         menuScreen.GetComponent<WinLose>().Lose();
     }
 }
