@@ -7,6 +7,7 @@ public class DoorOpening : MonoBehaviour
     [SerializeField] GameObject winChanceBlock;
     [SerializeField] GameObject pointer;
     [SerializeField] KeyCode stopPointerButton;
+    [SerializeField] bool isDrawer = false;
     bool stopPointer;
     float currHeight;
     float randomWinHeight;
@@ -41,9 +42,16 @@ public class DoorOpening : MonoBehaviour
         }
         else
         {
-            Debug.Log("A");
             if (pointer.transform.position.y > winChanceBlock.transform.position.y - winChanceBlock.transform.lossyScale.y / 2 && pointer.transform.position.y < winChanceBlock.transform.position.y + winChanceBlock.transform.lossyScale.y / 2)
             {
+                if (isDrawer)
+                {
+                    //reverse direction
+                }
+                else
+                {
+                    //open door
+                }
                 Debug.Log("open");
             }
             else
