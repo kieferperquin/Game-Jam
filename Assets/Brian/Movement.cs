@@ -8,6 +8,7 @@ public class Movement : MonoBehaviour
     float horizontalMove = 0f;
     bool jump;
     public CharacterController2D controller;
+    public Animation anim;
     bool stopMovement;
     int reverseDir = 1;
 
