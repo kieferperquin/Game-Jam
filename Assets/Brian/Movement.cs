@@ -49,4 +49,15 @@ public class Movement : MonoBehaviour
     {
         reverseDir = -1;
     }
+    public bool WinCondition()
+    {
+        if (reverseDir == -1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }
