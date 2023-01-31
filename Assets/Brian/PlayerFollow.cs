@@ -28,7 +28,7 @@ public class PlayerFollow : MonoBehaviour
     }
     public void StopFollow()
     {
-        startFollowing = true;
+        startFollowing = false;
     }
     public void SpecificFollow(bool folX, bool folY)
     {
