@@ -32,7 +32,7 @@ public class Movement : MonoBehaviour
         }
 
         anim.GetComponent<Animator>().SetBool("IsGrounded", controller.GetComponent<CharacterController2D>().GetGrounded());
-        faceDir = Input.GetAxisRaw("Horizontal");
+        faceDir = Input.GetAxisRaw("Horizontal") * reverseDir;
         anim.GetComponent<Animator>().SetFloat("Dir", faceDir);
 
         if (faceDir == -1)
