@@ -7,9 +7,9 @@ public class CandyWrapper : MonoBehaviour
     GameObject player;
     static GameObject mostRecent;
 
-    void start()
+    void Start()
     {
-        GameObject.Find("Player");
+        player = GameObject.Find("Player");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
