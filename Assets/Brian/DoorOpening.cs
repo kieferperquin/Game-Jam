@@ -60,8 +60,16 @@ public class DoorOpening : MonoBehaviour
             }
             else
             {
-                parent.GetComponent<DoorCollision>().OpenFail();
-                Destroy(gameObject);
+                if (isDrawer)
+                {
+                    parent.GetComponent<DoorCollision>().PlayerLoses();
+                    Destroy(gameObject);
+                }
+                else
+                {
+                    parent.GetComponent<DoorCollision>().OpenFail();
+                    Destroy(gameObject);
+                }
             }
         }
 
