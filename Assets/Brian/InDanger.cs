@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InDanger : MonoBehaviour
 {
     [SerializeField] KeyCode rapidPressButton;
     [SerializeField] GameObject menuScreen;
     [SerializeField] GameObject rapidPressScreen;
+    [SerializeField] GameObject seconsLeft;
+    [SerializeField] GameObject clicksLeft;
     float StartTime = 5;
     int maxPresses = 50;
     int pressCount = 0;
@@ -50,8 +53,8 @@ public class InDanger : MonoBehaviour
                 pressGoal += 5;
                 gameObject.GetComponent<Movement>().ResumeMoving();
             }
-
-            rapidPressScreen.GetComponentInChildren<>
+            clicksLeft.GetComponent<>
+            
         }
         else
         {
