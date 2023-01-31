@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameStart : MonoBehaviour
 {
@@ -25,5 +26,6 @@ public class GameStart : MonoBehaviour
         gameStart.SetActive(true);
         winScreen.SetActive(false);
         loseScreen.SetActive(false);
+        SceneManager.LoadScene("Final");
     }
 }
