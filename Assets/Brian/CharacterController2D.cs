@@ -42,6 +42,11 @@ public class CharacterController2D : MonoBehaviour
 				//amount = 2;
 			}
 		}
+
+        if (grounded == true)
+        {
+            //stop jump anim
+        }
 	}
 
 	public void Move(float move, bool jump)
@@ -55,5 +60,9 @@ public class CharacterController2D : MonoBehaviour
 
         Vector3 targetVelocity = new Vector2(move * 10f, playerRigidBody.velocity.y);
         playerRigidBody.velocity = Vector3.SmoothDamp(playerRigidBody.velocity, targetVelocity, ref curVelocity, .05f);
+    }
+    public bool GetGrounded()
+    {
+        return grounded;
     }
 }

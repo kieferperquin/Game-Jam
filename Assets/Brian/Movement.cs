@@ -8,10 +8,11 @@ public class Movement : MonoBehaviour
     float horizontalMove = 0f;
     bool jump;
     public CharacterController2D controller;
-    public Animation anim;
+    public GameObject anim;
     bool stopMovement;
     int reverseDir = 1;
 
+    float faceDir;
     // Update is called once per frame
     void Update()
     {
@@ -28,7 +29,20 @@ public class Movement : MonoBehaviour
         {
             horizontalMove = 0;
             jump = false;
-        }    
+        }
+
+        anim.GetComponent<Animator>().SetBool("IsGrounded", controller.GetComponent<CharacterController2D>().GetGrounded());
+        faceDir = Input.GetAxisRaw("Horizontal");
+        anim.GetComponent<Animator>().SetFloat("Dir", faceDir);
+
+        if (faceDir == -1)
+        {
+            anim.GetComponent<SpriteRenderer>().flipX = true;
+        }
+        else if (faceDir == 1)
+        {
+            anim.GetComponent<SpriteRenderer>().flipX = false;
+        }
     }
     void FixedUpdate()
     {
